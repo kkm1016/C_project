@@ -1,0 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	int mine[9][9] = { 0 };
+	int x, y; 
+
+	printf("Enter map info "); 
+	for (int i = 1; i < 4; i++)
+	{
+		for (int j= 1; j < 4; j++)
+		{
+			scanf("%d", &mine[i][j]); 
+
+		}
+	}
+
+	printf("\n 좌표입력"); 
+	scanf("%d %d",&x, &y); 
+
+	if (mine[x][y] == 1)
+	{
+		printf("-1"); 
+	}
+	else
+	{
+		printf("주위에 있는 지뢰의 개수는 %d 개", mine[x-1][y]+ mine[x+1][y]+mine[x][y-1]+mine[x][y+1]
+			+mine[x-1][y-1]+mine[x-1][y+1]+mine[x+1][y-1]+mine[x+1][y+1]);
+	}
+
+
+}
