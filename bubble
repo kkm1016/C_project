@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+int main()
+{
+	int a, b, c;
+	printf("Enter three integers\n1 2 3:"); //print "Enter three inegers 1 2 3: "
+	scanf_s(" %d %d %d", &a, &b, &c);// you can choose the number a,b,c. 
+
+	switch (a >= b) //Compare the sizes of a,b 
+	{
+	case 1: printf("1st trial: compare %d and %d...SWAP? [No!]\n--->%d %d %d\n",a, b, a, b, c); // a is equal to or bigger than b. don't swap. 
+		switch (b >= c) //Compare the sizes of b,c
+		{
+		case 1: printf("2nd trial: compare %d and %d...SWAP? [No!]\n--->%d %d %d\n", b, c ,a, b, c); //b is equal to or bigger than c. don't swap. 
+			switch (a >= b) //Compare the sizes of a,b 
+			{
+			case 1: printf("3rd trial: compare %d and %d...SWAP? [No!]\n--->%d %d %d\n", a, b, a, b, c); //a is equal to or bigger than b. don't swap. 
+				break; // escape the repeated statement. 
+			case 0: printf("3rd trial: compare %d and %d...SWAP? [Yes!]\n--->%d %d %d\n", a,b ,b, a, c); // a is smaller than b. swap. 
+				break; // escape the repeated statement. 
+			}
+			break; // escape the repeated statement. 
+		case 0: printf("2nd trial: compare %d and %d...SWAP? [Yes!]\n--->%d %d %d\n",b,c, a, c, b); //b is smaller than c.swap.
+			switch (a >= c) //Compare the sizes of a,c
+			{
+			case 1: printf("3rd trial: compare %d and %d...SWAP? [No!]\n--->%d %d %d\n",a,c, a, c, b); //a is equal to or bigger than c. don't swap. 
+				break; // escape the repeated statement. 
+			case 0: printf("3rd trial: compare %d and %d...SWAP? [Yes!]\n--->%d %d %d\n", a, c, c, a, b); //a is smaller than c.swap.
+				break; // escape the repeated statement. 
+			}
+			break; // escape the repeated statement. 
+		}
+		break; // escape the repeated statement. 
+	case 0: printf("1st trial: compare %d and %d...SWAP? [Yes!]\n--->%d %d %d\n",a,b, b, a, c); //a is smaller than b.swap.
+		switch (a >= c) //Compare the sizes of a,c
+		{
+		case 1: printf("2nd trial: compare %d and %d...SWAP? [No!]\n--->%d %d %d\n", a,c ,b, a, c); //a is equal to or bigger than c. don't swap. 
+			switch (b >= a) //Compare the sizes of b,a
+			{
+			case 1: printf("3rd trial: compare %d and %d...SWAP? [No!]\n--->%d %d %d\n", b,a, b, a, c); //b is equal to or bigger than a. don't swap. 
+				break; // escape the repeated statement. 
+			case 0: printf("3rd trial: compare %d and %d...SWAP? [Yes!]\n--->%d %d %d\n", b,a ,a, b, c); //b is smaller than a.swap.
+				break; // escape the repeated statement.
+			}
+			break; // escape the repeated statement.
+		case 0: printf("2nd trial: compare %d and %d...SWAP? [Yes!]\n--->%d %d %d\n", a,c ,b, c, a); //a is smaller than c.swap.
+			switch (b >= c) //Compare the sizes of b,c
+			{
+			case 1: printf("3rd trial: compare %d and %d...SWAP? [No!]\n--->%d %d %d\n", b,c, b, c, a); //b is equal to or bigger than c. don't swap. 
+				break; // escape the repeated statement.
+			case 0: printf("3rd trial: compare %d and %d...SWAP? [Yes!]\n--->%d %d %d\n", b,c, c, b, a); //b is smaller than c.swap.
+				break; // escape the repeated statement.
+			}
+			break; // escape the repeated statement.
+		}
+		break; // escape the repeated statement.
+	}
+
+
+}
