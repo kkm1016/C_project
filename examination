@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+
+	int K, L, M, N, F; //declare variable 
+
+	printf("Q1: Do you feel unhappy and depressed?"); // ask first question. 
+	char a; //declare variable a
+	scanf_s(" %c", &a, sizeof(a)); // enter the answer y or n 
+	K = (a == 'y'); // declare K variable , if a is 'y', this statment is true so K is 1. if not, k is 0
+
+
+	printf("Q2: Can't you sleep deeply at night?"); // ask second question
+	char b; // declare variable b
+	scanf_s(" %c", &b, sizeof(b)); // enter the answer y or n 
+	L = (b == 'y'); //declare L variable, if b is 'y', this statment is true so L is 1. if not, L is 0
+	
+
+
+
+	printf("Q3: Do people around you make you happy?");// ask third question
+	char c; // declare variable c
+	scanf_s(" %c", &c, sizeof(c)); // enter the answer y or n 
+	M = (c == 'n'); //declare M variable, if c is 'n', this statment is true so M is 1. if not, M is 0
+	
+
+
+
+	printf("Q4: Do you have any records of being treated at the hospital for metal health reasons?"); // ask fourth question
+	char d; // declare variable d
+	scanf_s(" %c", &d, sizeof(d)); //enter the answer y or n 
+	N = (d == 'y'); // declare N variable, if d is 'y', this statment is true so N is 1. if not, N is 0
+	
+
+
+	F = K + L + M + N * 2; // F is score. And dividing points of fourth question is two points. So use N*2
+	printf("your state is %d.", (F>=3 || N==1)); // If score is 3points or more than 3 points your state is 1. 
+	//Also if you answer 'y' about fourth quesiton, your state is 1. If nothing, your state is 0. 
+
+}
