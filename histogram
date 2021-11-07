@@ -1,0 +1,117 @@
+#include<stdio.h> 
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+	int i; // declare variable
+	long seed; // declare variable
+	int sum1 = 0, sum2 = 0, sum3 = 0, sum4 = 0, sum5 = 0, sum6 = 0 ,sum7 = 0, sum8 = 0, sum9 = 0, sum10 = 0; // declare variable 
+	int a; // declare variable 
+	char n = '*'; // declare variable n ='*'
+	seed = time(NULL); // supply seed data about time to make the seed data different
+	srand(seed); // The function is called to give seed data the random number
+	for (i = 0; i < 10000; i++) // repeat below statement 10000 times. 
+	{
+		int d = rand() % 100; // declare d. d is the random number in the range of 0 to 99.
+		
+
+		if (d >= 0 && d < 10) // If d is equal to or bigger than 0 and smaller than 10. 
+		{
+			sum1 += 1; // add 1 to the sum1
+		}
+		else if (d >= 10 && d < 20) // If d is equal to or bigger than 10 and smaller than 20. 
+		{
+			sum2 += 1; // add 1 to the sum2
+		}
+		else if (d >= 20 && d < 30) // If d is equal to or bigger than 20 and smaller than 30. 
+		{
+			sum3 += 1; // add 1 to the sum3
+		}
+		else if (d >= 30 && d < 40) // If d is equal to or bigger than 30 and smaller than 40. 
+		{
+			sum4 += 1; // add 1 to the sum4
+		}
+		else if (d >= 40 && d < 50) // If d is equal to or bigger than 40 and smaller than 50. 
+		{
+			sum5 += 1; // add 1 to the sum5
+		}
+		else if (d >= 50 && d < 60) // If d is equal to or bigger than 50 and smaller than 60. 
+		{
+			sum6 += 1; // add 1 to the sum6
+		}
+		else if (d >= 60 && d < 70)  // If d is equal to or bigger than 60 and smaller than 70. 
+		{
+			sum7 += 1; // add 1 to the sum7
+		}
+		else if (d >= 70 && d < 80) // If d is equal to or bigger than 70 and smaller than 80. 
+		{
+			sum8 += 1; // add 1 to the sum8
+		}
+		else if (d >= 80 && d < 90) // If d is equal to or bigger than 80 and smaller than 90. 
+		{
+			sum9 += 1; // add 1 to the sum9
+		}
+		else // If d is equal to or bigger than 90 and smaller than 100. 
+		{
+			sum10 += 1; // add 1 to the sum10
+		}
+		
+	}
+
+	printf("Interval1:  |"); // print "Interval1:  |"
+	for (a = 0; a < (sum1 / 10); a++) { //repeat below statement until a is (sum1/10)-1
+		printf("%c", n); //print '*'
+	}
+	printf("\n"); //change the line
+	printf("Interval2:  |"); // print "Interval2:  |"
+	
+	for (a = 0; a < (sum2 / 10); a++) {  //repeat below statement until a is (sum2/10)-1
+		printf("%c", n); //print '*'
+	
+	}
+	printf("\n"); //change the line
+	printf("Interval3:  |"); // print "Interval3:  |"
+	for (a = 0; a < (sum3 / 10); a++) { //repeat below statement until a is (sum3/10)-1
+		printf("%c", n); //print '*'
+	}
+	printf("\n"); //change the line
+	printf("Interval4:  |"); // print "Interval4:  |"
+	for (a = 0; a < (sum4 / 10); a++) { //repeat below statement until a is (sum4/10)-1
+		printf("%c", n); //print '*'
+	}
+	printf("\n"); //change the line
+	printf("Interval5:  |"); // print "Interval5:  |"
+	for (a = 0; a < (sum5 / 10); a++) { //repeat below statement until a is (sum5/10)-1
+		printf("%c", n); //print '*'
+	}
+	printf("\n"); //change the line
+	printf("Interval6:  |"); // print "Interval6:  |"
+	for (a = 0; a < (sum6 / 10); a++) { //repeat below statement until a is (sum6/10)-1
+		printf("%c", n); //print '*'
+	}
+	printf("\n"); //change the line
+	printf("Interval7:  |"); // print "Interval7:  |"
+	for (a = 0; a < (sum7 / 10); a++) { //repeat below statement until a is (sum7/10)-1
+		printf("%c", n);  //print '*'
+	}
+	printf("\n"); //change the line
+	printf("Interval8:  |"); // print "Interval8:  |"
+	for (a = 0; a < (sum8 / 10); a++) { //repeat below statement until a is (sum8/10)-1
+		printf("%c", n);  //print '*'
+
+	}
+	printf("\n"); //change the line
+	printf("Interval9:  |"); // print "Interval9:  |"
+	for (a = 0; a < (sum9 / 10); a++) { //repeat below statement until a is (sum9/10)-1
+		printf("%c", n);  //print '*'
+	}
+	printf("\n"); //change the line
+	printf("Interval10: |"); // print "Interval10:  |"
+	for (a = 0; a < (sum10 / 10); a++) { //repeat below statement until a is (sum10/10)-1
+		printf("%c", n);  //print '*'
+	}
+	printf("\n"); //change the line
+	
+
+
+}
