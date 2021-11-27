@@ -1,4 +1,4 @@
-#Uploading C_project \m
+#Uploading C_project \n
 I will upload some codes that wrote in class. 
 That's one small step for github, one giant leap for me.
 
